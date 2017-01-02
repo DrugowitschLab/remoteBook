@@ -28,11 +28,11 @@ Setting things up: ( this is a bit stupid, but it works....)
 2) setup local remote:
     local $ git remote add cluster ssh://LR93@orchestra.med.harvard.edu/home/lr93/projects/sourceRepos/MYPROJ.git
 
-3) push to the cluste
+3) push to the cluster
     local $ git push cluster master
 
 3) on the cluster, pull from the bare repo:
-    local $ git pull origin master
+    remote $ git pull origin master
 
 
 
