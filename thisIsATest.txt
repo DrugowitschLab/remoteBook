@@ -5,25 +5,28 @@ Heres how the workflow shoud go.
 2) git push to the cluster 
     $ git push cluster master
 
-3) the script to get a notebook window
-4) work in the notebook
+3) On the cluster, pull from the origin.
+4) run the script to get a notebook window
+5) work in the notebook
 
 
 
 
-Setting things up: ( this is stupid, but it works....)
+
+
+
+
+
+Setting things up: ( this is a bit stupid, but it works....)
 1) Make the cluster remote:
-    remote $ git init --bare .git
+    remote $ source proSetup MYPROJ
 
 2) setup local remote:
-    local $ git remote add cluster ssh://LR93@orchestra.med.harvard.edu/home/lr93/MYDIR
+    local $ git remote add cluster ssh://LR93@orchestra.med.harvard.edu/home/lr93/sourceRepos/MYPROJ
 
-3) push to cluster:
-    local $ git push cluster master
+3) on the cluster, pull from the bare repo:
+    local $ git pull origin master
 
-4) Convert the remote from a bare to a working repository:
-    remote $ git init
-    remote $ git reset --hard
 
 
 
