@@ -3,9 +3,11 @@ This is a test project for setting up the server properly
 Heres how the workflow shoud go.
 1) do local work
 2) git push to the cluster 
-    $ git push cluster master
+    local $ git push cluster master
 
 3) On the cluster, pull from the origin.
+    remote $ git pull origin master
+
 4) run the script to get a notebook window
 5) work in the notebook
 
@@ -16,13 +18,18 @@ Heres how the workflow shoud go.
 
 
 
+# This requires two git repositories because git doesn't like pushing to non-bare repos. Even if you do, it doesn't update the files in the currently checked-out branch.
 
 Setting things up: ( this is a bit stupid, but it works....)
+
 1) Make the cluster remote:
     remote $ source proSetup MYPROJ
 
 2) setup local remote:
-    local $ git remote add cluster ssh://LR93@orchestra.med.harvard.edu/home/lr93/sourceRepos/MYPROJ
+    local $ git remote add cluster ssh://LR93@orchestra.med.harvard.edu/home/lr93/projects/sourceRepos/MYPROJ.git
+
+3) push to the cluste
+    local $ git push cluster master
 
 3) on the cluster, pull from the bare repo:
     local $ git pull origin master
