@@ -11,10 +11,19 @@ Heres how the workflow shoud go.
 
 
 
-Setting things up:
-1) Adding the cluster remote
+Setting things up: ( this is stupid, but it works....)
+1) Make the cluster remote:
+    remote $ git init --bare .git
 
-    
+2) setup local remote:
+    local $ git remote add cluster ssh://LR93@orchestra.med.harvard.edu/home/lr93/MYDIR
+
+3) push to cluster:
+    local $ git push cluster master
+
+4) Convert the remote from a bare to a working repository:
+    remote $ git init
+    remote $ git reset --hard
 
 
 
