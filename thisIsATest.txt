@@ -1,0 +1,21 @@
+This is a test project for setting up the server properly
+
+Heres how the workflow shoud go.
+1) do local work
+2) git push to the cluster 
+    $ git push cluster master
+
+3) the script to get a notebook window
+4) work in the notebook
+
+
+
+
+Setting things up:
+1) Adding the cluster remote
+
+    
+
+
+
+
