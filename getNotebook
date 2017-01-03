@@ -1,21 +1,24 @@
 #ssh's into the harvard med cluster, executes a port forwarding script, and connects a notebook at that port
 
 # default port is 50021. Test for user defined port
-if [ -z $PORT ]; then 
+if [ -z $1 ]; then 
         PORT=50021
+    else
+        PORT=$1
 fi
 
-echo $1
 
 
 # for now, use the default virtual environment for all projects.
 # If there are requirement collisions, there may be fancy environment building approaches, ie envplus
 # turning on the environment is also a hassle. For now, I out this in my login shell
-
+echo $PORT:127.0.0.1:$PORT
 
 # this runs on the local machine to initiate the conection to the cluster
-ssh -L $PORT:127.0.0.1:$PORT  LR93@orchestra.med.harvard.edu "
+ssh -L $PORT:127.0.0.1:$PORT -X lr93@orchestra.med.harvard.edu "
 # this is running on the cluster
-bash -l ./getNbSession $PORT
+bash -l getNbSession $PORT
+echo 'hello'
+bash -l
 "
 
