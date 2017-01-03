@@ -1,13 +1,9 @@
 # requests the notebook session. This must run on the server, as non-interactive ssh sessions 
 # don't have access to all of the inteactive commands
 
-# activate the virtual environment before requesting an interactive session
-source venv/bin/activate
-bsub -q interactive -Is "
-# this is running on the interactive session
-cd projects/$1
-screen -d -m jupyter notebook --port=$2 --browser='none'
-hostname
-"
+
+# this runs on the login machine, and gets access to an interactive session
+
+intMach=$( bsub -q interactive -Is "bash -l startSession $1 $2")
 
 

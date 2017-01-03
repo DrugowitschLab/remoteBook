@@ -1,0 +1,3 @@
+cd projects/$1
+screen -d -m jupyter notebook --port=$2 --browser='none'
+hostname
