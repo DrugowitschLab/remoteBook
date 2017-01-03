@@ -4,6 +4,6 @@
 
 # this runs on the login machine, and gets access to an interactive session
 
-intMach=$( bsub -q interactive -Is "bash -l startSession $1 $2")
+myHost=$( bsub -q interactive -Is "bash -l startSession $1")
 
 
