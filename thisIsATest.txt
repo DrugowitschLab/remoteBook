@@ -31,8 +31,12 @@ Setting things up: ( this is a bit stupid, but it works....)
 3) push to the cluster
     local $ git push cluster master
 
-3) on the cluster, pull from the bare repo:
+4) on the cluster, pull from the bare repo:
     remote $ git pull origin master
+
+5) on the cluster, setup the virutalenv
+    $ virtualenv ven
+    $ pip install -r requirements.txt
 
 
 
