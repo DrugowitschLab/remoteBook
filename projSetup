@@ -1,13 +1,18 @@
 # This script makes directories and initializes the git repos for running a project on the cluster
 # the name of the project is given by the first argument
 
-# make directories
 git init $1
-git init --bare sourceRepos/$1'.git'
+cat <<'EOF' >$1/.git/hooks/post-receive
+git checkout master^0
+EOF
+
+# make directories
+#git init $1
+#git init --bare sourceRepos/$1'.git'
 
 # add the origin branch to the running ('working') repository
-cd $1
-git remote add origin ../sourceRepos/$1'.git'
-
-cd ..
+#cd $1
+#git remote add origin ../sourceRepos/$1'.git'
+#
+#cd ..
 
