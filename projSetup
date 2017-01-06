@@ -3,9 +3,10 @@
 
 git init $1
 cd $1
-git config recieve.denyCurrentBranch updateInstead
+git config receive.denyCurrentBranch ignore
 
-
+echo 'git checkout master' > .git/hooks/post-receive
+chmod +x .git/hooks/post-receive
 
 # old files 
 
