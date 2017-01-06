@@ -17,7 +17,7 @@ echo $PORT:127.0.0.1:$PORT
 # this runs on the local machine to initiate the conection to the cluster
 ssh -L $PORT:127.0.0.1:$PORT -X lr93@orchestra.med.harvard.edu "
 # this is running on the cluster
-bash -l getNbSession $PORT
+bash -i -l getNbSession $PORT
 echo 'hello'
 bash -l
 "
