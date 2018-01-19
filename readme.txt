@@ -1,3 +1,5 @@
+Runs jupyter notebooks in interactive sessions on the cluster. Port-forwards them back to be opened in the local browser.
+
 To run:
 1) run getNotebook $PORT
 
