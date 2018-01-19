@@ -4,7 +4,7 @@
 
 # this runs on the login machine, and gets access to an interactive session
 
-myHost=$( bsub -q interactive -Is "bash -l startSession $1")
+myHost=$( srun -t 0-4:00 -pty -p -interactive "bash -l startSession $1")
 hostAdr=$(echo $myHost | ack -o '(?<=\. ).*?$' )
 echo $hostAdr
 echo $1:127.0.0.1:$1
