@@ -17,9 +17,8 @@ This sets up the git repositories for the project that can be push to and will u
 
 
 
------------------------------------------------------------
 
-This is a test project for setting up the server properly
+-------------------------------------------------------------------------------------------------------------
 
 Heres how the workflow should go.
 1) do local work
@@ -31,6 +30,8 @@ Heres how the workflow should go.
 
 4) run the script to get a notebook window
 5) work in the notebook
+
+
 
 
 
