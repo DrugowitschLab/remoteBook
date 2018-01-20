@@ -1,3 +1,3 @@
-unset XDG_RUNTIME_DIR
+su lr93
 screen -d -m jupyter notebook --port=$1 --browser='none'
 hostname
