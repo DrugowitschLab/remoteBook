@@ -1,2 +1,3 @@
+unset XDG_RUNTIME_DIR
 screen -d -m jupyter notebook --port=$1 --browser='none'
 hostname
