@@ -20,18 +20,18 @@ This sets up the git repositories for the project that can be push to and will u
 
 
 
--------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
 
 Heres how the workflow should go.
 1) do local work
 2) git push to the cluster 
     local $ git push cluster master
 
-3) On the cluster, pull from the origin.
+ or, On the cluster, pull from the origin.
     remote $ git pull origin master
 
-4) run the script to get a notebook window
-5) work in the notebook
+3) run the script to get a notebook window
+4) work in the notebook
 
 
 
