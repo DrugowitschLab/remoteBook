@@ -1,4 +1,4 @@
-Runs jupyter notebooks in interactive sessions on the cluster. Port-forwards them back to be opened in the local browser.
+Runs jupyter notebooks in interactive sessions on the cluster. Port-forwards them back to be opened in the local browser. This version works on O2 and orchestra.
 
 To run:
 1) run getNotebook $PORT
