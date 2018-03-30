@@ -1,7 +1,0 @@
-screen -d -m jupyter notebook --port=$1 --browser='none'
-echo $1:127.0.0.1:$1
-# the slight difficult here is that we need to hold open the connection in order to keep the interactive session busy
-# this is why I have to open it from the remote side
-ssh -N -v -R $1:127.0.0.1:$1 lr93@$2
-
-
