@@ -25,8 +25,8 @@ Commit and run git `push cluster master`
 Runs jupyter notebooks in interactive sessions on the cluster. Port-forwards them back to be opened in the local browser. This version works on O2 and orchestra.
 
 #### To setup:
-1. put getNotebook.sh on your local machine and getNbSession.sh and startSession.sh on the remote machine. (all executable)
-
+1. Put getNotebook.sh on your local machine and getNbSession.sh and startSession.sh on the remote machine. (all executable)
+2. change the username in the getNotebook and startSession files
 
 #### To run:
 1. Sync local files to the remote machine.
