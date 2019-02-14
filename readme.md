@@ -26,7 +26,7 @@ Runs jupyter notebooks in interactive sessions on the cluster. Port-forwards the
 
 #### To setup:
 1. Put getNotebook.sh on your local machine and getNbSession.sh and startSession.sh on the remote machine. (all executable)
-2. change the username in the getNotebook and startSession files
+2. Change the username in the getNotebook and startSession files
 
 #### To run:
 1. Sync local files to the remote machine.
